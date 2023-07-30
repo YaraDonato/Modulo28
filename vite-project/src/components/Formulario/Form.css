@@ -1,0 +1,132 @@
+
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+/* Codigo do formulario */
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #10454F;
+    justify-content: center;
+}
+
+.txth1{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    color: var(--corTexto);
+    letter-spacing: 5px;
+    display: flex;
+}
+
+.formulario{
+    padding: 8rem;
+    border-radius: 5rem;
+    background-color: var(--corFundo);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 10px #12736944, 0 0 50px #4fc3dc;
+    z-index: 1;
+    margin-top: 8rem;
+}
+
+.inputTabela{
+    justify-content: space-between;
+    padding: 16px;
+    text-decoration: none;
+    background-color: #BFBFBF;
+    color: black;
+    transition: ease all 0.5s;
+    padding-top: 1.5rem;
+}
+
+.inputTabela:hover{
+    background-color: #fff;
+    transform: scale(1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.botao{
+    background-color: #476;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    transition: ease all 1s;
+}
+
+.botao:hover{
+    background-color: #127369;
+    transform: scale(1.1);
+}
+
+.container-formulario{
+    display: flex;
+}
+
+.ParagrafoResultado{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    font-size: larger;
+    opacity: 100%;
+    transition: ease all 1s;
+}
+
+.opacity0{
+    opacity: 0%;
+    transition: ease all 1s;
+}
+
+:root{
+    --corFundo: #234;
+    --corTexto: #fff;
+}
+
+/* Fim Codigo formulario */
